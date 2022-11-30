@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mohan's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" />
+    <script>
+        var prev = window.innerWidth;
+        function screensize() {
+            if (window.innerWidth <= 767) {
+                document.getElementById("content").setAttribute("data-bs-target", "#navbar-example");
+                if (prev > 767)
+                    location.reload();
+            }
+            else {
+                document.getElementById("content").setAttribute("data-bs-target", "#web-navbar");
+                if (prev <= 767)
+                    location.reload();
+            }
+            prev = window.innerWidth;
+        }
+        window.onload = () => {
+            screensize()
+        }
+        window.onresize = () => {
+            screensize()
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Logo -->
+    <!-- <div class="d-flex justify-content-start">
+        <img src="assets/images/logo.png" class="m-3" height="50px" width="50px" style="position: fixed;">
+    </div> -->
+
+    <!-- Navbar toggler button for small screen -->
+    <div class="d-flex justify-content-end " style="position:relative;z-index:1;">
+        <div class="btn-group btn-group-lg p-2 d-sm-block d-md-none" role="group" aria-label="Large button group"
+            style="position: fixed;">
+            <button type="button" class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" ><i class="bi bi-list"
+                    style="color: #ccd6f6;font-size: 1.5rem;"></i></button>
+        </div>
+    </div>
+
+
+    <!-- sidemenu for small screen-->
+    <div class="offcanvas offcanvas-end offcanvas-sm bg-dark" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" style="width:60% ;opacity: 90%;">
+        <div class="offcanvas-header">
+            <h1>Welcome</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body align-items-center">
+            <nav id="navbar-example" class="flex-column ">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#home" type="button"><i
+                            class="bi bi-house-door-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+                    <a class="nav-link" href="#about"><i
+                            class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;About</a>
+                    <a class="nav-link" href="#education"><i
+                        class="bi bi-mortarboard-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Education</a>
+                    <a class="nav-link" href="#project"><i class="bi bi-tools"></i>&nbsp;&nbsp;&nbsp;&nbsp;Projects</a>
+                    <a class="nav-link" href="#contact"><i
+                            class="bi bi-envelope-check-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Contact</a>
+                </nav>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- Side navbar for large screen-->
+    <div class="container-fluid web-navbar">
+
+        <div class="d-none d-md-block" style="position:fixed;" data-aos="zoom-in-right">
+            <nav id="web-navbar" class="flex-column">
+                <nav class="nav nav-pills flex-column vh-100 justify-content-center">
+                    <a class="nav-link web" href="#home" type="button"><i
+                            class="bi bi-house-door-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+                    <a class="nav-link web" href="#about"><i
+                            class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;About</a>
+                    <a class="nav-link web" href="#education"><i
+                        class="bi bi-mortarboard-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Education</a>
+                    <a class="nav-link web" href="#experience"><i
+                        class="bi bi bi-briefcase-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Experience</a>
+                    <a class="nav-link web" href="#projects"><i
+                        class="bi bi-tools"></i>&nbsp;&nbsp;&nbsp;&nbsp;Projects</a>
+                    <a class="nav-link web" href="#skills"><i
+                        class="bi bi-ui-checks-grid"></i>&nbsp;&nbsp;&nbsp;&nbsp;Skills</a>
+                    <a class="nav-link web" href="#achievements"><i
+                            class="bi bi-award-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Achievements</a>                   
+                    <a class="nav-link web" href="#item-5"><i
+                            class="bi bi-envelope-check-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Contact</a>
+                </nav>
+            </nav>
+        </div>
+
+    </div>
+
+
+
+    <!-- Hero section -->
+    <div id="content" data-bs-spy="scroll" data-bs-target="" data-bs-smooth-scroll="true" class="scrollspy-example-2"
+        tabindex="0">
+        <div id="home">
+            <div class="container-fluid hero-section">
+                <div class="row hero-section-row">
+                    <div class="col-1"></div>
+                    <div
+                        class="col-lg-4 col-md-4 col-sm-12 d-flex align-items-center justify-content-center flex-column">
+                        <img src="assets/images/profile_photo.jpg" class="profile-photo" data-aos="zoom-in"
+                            data-aos-duration="1500">
+
+                        <p class="m-4">
+                            <a href="https://www.linkedin.com/in/mohankumarm137"><i class="bi bi-linkedin p-3" ></i></a>
+                            <i class="bi bi-instagram p-3"></i>
+                            <i class="bi bi-github p-3"></i>
+                            <a href="mailto:mohankumargowda137@gmail.com"><i class="bi bi-envelope-fill p-3"></i></a>
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 intro-text d-flex align-items-center ">
+                        <div class="hero-section-text d-block" data-aos="fade-left" data-aos-duration="1500">
+                            <div class="text-center">
+                                <h5 class="intro-text-small">Hi, my name is</h5>
+                                <h1 class="intro-text-name">Mohan Kumar M</h1>
+                            </div>
+                            <div class="hero-animated">
+                                <h3 class="d-inline animated_static">I Build </h3>
+                                <h2 class="d-inline" id="animated_field"> </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="mouse_scroll d-none d-md-block">
+
+                        <div class="mouse">
+                            <div class="wheel"></div>
+                        </div>
+                        <div>
+                            <span class="m_scroll_arrows unu"></span>
+                            <span class="m_scroll_arrows doi"></span>
+                            <span class="m_scroll_arrows trei"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+
+        <!-- About section -->
+        <div id="about">
+            <div class="container text-center ">
+                <h1 class="section_heading">ABOUT ME</h1>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-10">
+                        <h5 class="about_description">I’m a software engineer specializing in building exceptional
+                            digital solutions in form of web applications and mobile applications. I also automate the
+                            manual jobs for error free and faster results for improved efficiency and productivity.
+                            Currently, I’m focused on building accessible and human-centered products that can bring the
+                            changes and make impact on lifestyle of people.</h5>
+                    </div>
+                </div>
+
+                <div class="row d-flex justify-content-center mt-4">
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Date of Birth:</b> 03/11/199</li>
+                            <li class="list-group-item"><b>Website:</b> www.mohankumarm.com</li>
+                            <li class="list-group-item"><b>Phone:</b> 7204451235</li>
+                            <li class="list-group-item"><b>Email:</b> mohankumargowda137@gmail.com</li>
+                          </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Degree:</b> B.E in Computer Science and Engineering</li>
+                            <li class="list-group-item"><b>Milestone project:</b> Vaccination Bot</li>
+                            <li class="list-group-item"><b>City:</b> Bengaluru</li>
+                            <li class="list-group-item"><b>Freelance:</b> Available</li>
+                          </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- Education section -->
+         <div id="education">
+            <div class="container text-center mt-5">
+                <h1 class="section_heading">EDUCATION</h1>
+
+                <div class="row mt-4">
+
+                    <!-- KNSIT-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">B.E (Computer Science)</h5>
+                            </div>
+                            <div class="card-body experience">
+                                <div class="row d-block">
+                                    <div class="col"><img class="mb-4"  style="background-color: white;border-radius: 100%;" src="./assets/images/knsit.png"
+                                        height="120px" width="130px" />&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="col d-block">
+                                        <h6 class="card-title mb-0">KNS Institute of Technology</h6><small
+                                            class="card-text ">Aug 2017 - Aug 2021 (4 years)</small>
+                                            
+                                        <h5 class="mt-2"><span class="badge text-bg-primary  rounded-pill">CGPA: 8.59</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- End of KNSIT-->
+    
+                    <!-- Nagarjuna Pu College-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">PUC</h5>
+                            </div>
+                            <div class="card-body experience">
+                                <div class="row d-block">
+                                    <div class="col"><img class="mb-4"  style="background-color: white; border-radius: 100%;" src="./assets/images/nagarjuna.png"
+                                            height="120px" width="130px" />&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="col d-block">
+                                        <h6 class="card-title mb-0" >Nagarjuna PU College</h6><small class="card-text ">May 2015
+                                            - April 2017 (2 years)</small>
+                                        <h5 class="mt-2"><span class="badge text-bg-primary  rounded-pill">Percentage: 91%</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Nagarjuna pu college-->
+    
+                    <!-- Anantha Vidyaniketan-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">SSLC</h5>
+                            </div>
+                            <div class="card-body experience">
+                                <div class="row d-block">
+                                    <div class="col"><img class="mb-4"  style="background-color: white;border-radius: 100%;" src="./assets/images/avn.png"
+                                        height="120px" width="130px" />&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="col d-block">
+                                        <h6 class="card-title mb-0">Anantha Vidyaniketan</h6><small class="card-text ">May 2016 - March 2017(1 year)</small>
+                                        <h5 class="mt-2"><span class="badge text-bg-primary  rounded-pill">Percentage: 86%</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Anantha Vidyaniketan-->
+    
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Experience section -->
+        <div id="experience">
+            <div class="container text-center">
+                <h1 class="section_heading mt-5 mb-4">WORK EXPERIENCE</h1>
+                <div class="row">
+
+                    <!-- Tata Consultancy Service-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">System Engineer</h5>
+                            </div>
+                            <div class="card-body experience">
+                                <div class="row d-inline">
+                                    <div class="col"><img class="mb-1" src="./assets/images/tcs.png"
+                                            height="130px" width="150px" style="background-color: white;border-radius: 100%;"/>&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="col d-block">
+                                        <h6 class="card-title">TATA CONSULTANCY SERVICES</h6><small
+                                            class="card-text ">Aug 2021 - Aug-2022 (1 year)</small>
+                                    </div>
+                                </div>
+                                <p class="card-text mb-4">Worked in Applications team for leading E-commerce giant
+                                    operating in USA.</p>
+                                <p class="card-text mb-4">Individually designed and delivered automation system for daily
+                                    operations which reduced human errors and increased overall efficiency of
+                                    operations. </p>
+                                <p class="card-text">
+                                    Rigorously identified and fixed bugs to enable smooth operation and improve overall user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End of Tata Consultancy Services-->
+
+                    <!-- Ignite X labs-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Web Developer</h5>
+                            </div>
+                            <div class="card-body experience">
+                                <div class="row d-inline">
+                                    <div class="col"><img class="mb-1" src="./assets/images/ignitexlabs.png"
+                                            height="130px" width="150px" style="background-color: white;border-radius: 100%;"/>&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="col d-block">
+                                        <h6 class="card-title" >IGNITE X LABS</h6><small class="card-text ">Jun 2020
+                                            - Sep-2020 (3 months)</small>
+                                    </div>
+                                </div>
+                                <p class="card-text mb-4">Worked on prototyping and developing the one of the most affordable educational ERP.</p>
+                                <p class="card-text mb-4">Developed user friendly and responsive UI along with robust backend for the application by using technologies like php, javascript, html, css and bootstrap.</p>
+                                <p class="card-text">Simplified data collection by making simple innovations thereby reducing great amount of time to fill forms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Ignite X labs-->
+
+                    <!-- Azure Skynet-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Cybersecurity Intern</h5>
+                            </div>
+                            <div class="card-body experience">
+                                <div class="row d-inline">
+                                    <div class="col"><img class="mb-1" src="./assets/images/azureskynet.png"
+                                            height="130px" width="150px" style="background-color: white;border-radius: 100%;" />&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="col d-block">
+                                        <h6 class="card-title">AZURE SKYNET</h6><small class="card-text ">Jan 2018 (1 month)</small>
+                                    </div>
+                                </div>
+                                <p class="card-text mb-4">Learned about wide variety of information gathering tools.</p>                               
+                                <p class="card-text mb-4">Gained knowledge about most used methods for hacking and implemented safety measures like encryption, stegnography for data protection.</p>
+                                <p class="card-text">Documented quick guide for creating awareness on activities that could lead to cybercrime. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of azure skynet-->
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Projects section -->
+        <div id="projects">
+            <div class="container text-center">
+                <h1 class="section_heading">PROJECTS</h1>
+
+                <div class="row mt-4">
+
+                    <!-- Vaccination Bot-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Vaccination Bot</h5>
+                            </div>
+                            <div class="card-body project">
+                                <div class="row d-inline">
+                                    <div class="col"><img class="mb-1" src="./assets/images/vaccine.png"
+                                            height="120px" width="130px" style="background-color: white;border-radius: 100%;" />&nbsp;&nbsp;&nbsp;</div>
+                                </div>
+                                <p class="card-text mb-4">I developed this bot look for vaccine availability in nearby locations and alert a person on telegram app as soon as vaccine was available in his/her location.</p>
+                                <p class="card-text mb-4">Bot was developed to help frontline workers as vaccination was compulsary for their regular operation. Through this bot I have helped many people to get vaccinated at the time when vaccine availability was very less.</p>
+                                <p class="card-text">The project was built using python and telegram api.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Vaccination Bot-->
+
+                    <!-- Movie Ticket Booking system-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Movie ticket booking system</h5>
+                            </div>
+                            <div class="card-body project">
+                                <div class="row d-inline">
+                                    <div class="col"><img class="mb-1" src="./assets/images/movieticketbooking.png"
+                                            height="120px" width="130px" style="background-color: white;border-radius: 100%;" />&nbsp;&nbsp;&nbsp;</div>
+                                </div>
+                                <p class="card-text mb-4">Built digital solution for movie ticket booking system catering the ticket booking services to consumers and theatre management capabilities to theatre owners.</p>
+                                <p class="card-text mb-4">The project enabled users to book movie tickets, owners to manage theatres and realtime payments and refunds were also made possible with the help of Instamojo payment API's.</p>
+                                <p class="card-text">The project was built using php, mysql, html, css and bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- End of Movie Ticket Booking System-->
+    
+                    <!-- Courier management system-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Courier management system</h5>
+                            </div>
+                            <div class="card-body project">
+                                <div class="row d-inline">
+                                    <div class="col"><img class="mb-1" src="./assets/images/fd1.jpg"
+                                            height="120px" width="130px" style="background-color: white;border-radius: 100%;" />&nbsp;&nbsp;&nbsp;</div>
+                                </div>
+                                <p class="card-text mb-4">The project was built to support small scale courier business vendors to have an digital solution to manage their business and gain vital insights about business operations.</p>
+                                <p class="card-text mb-4">This digital solution enabled end to end courier services through internet without any paperwork or requiring to visit nearby courier service for information and also provided features like live tracking of courier.</p>
+                                <p class="card-text">The project was built using php, mysql, html, css , ionic and bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- End of Courier management system-->
+    
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Skill section -->
+        <div id="skills">
+            <div class="container-fluid text-center">
+                <h1 class="section_heading">SKILLS</h1>
+            </div>
+        </div>
+
+        <!-- Achievement section -->
+        <div id="achievements">
+            <div class="container text-center">
+                <h1 class="section_heading">ACHIEVEMENTS</h1>
+
+                <div class="row mt-4">
+
+                    <!-- MTA Python-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white p-0"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Microsoft Technology Associate<br>(Python)</h5>
+                            </div>
+                            <div class="card-body project mt-1">
+                                    <div class="col">
+                                        <div style="background-color:white;" data-iframe-width="200" data-iframe-height="240" data-share-badge-id="940ae2cd-c552-4a90-b540-6816f3df3a08" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                    </div>
+                                    <div class="col">
+                                        <small class="card-text" style="color: lime;">*Click on badge to check my achievement</small>
+                                    </div>
+                                <p class="card-text mt-2">This exam was designed to test the skill in python programming language in performing operations using data types and operators, control flow with decisions and loops, perform input and output operations, document and structure code, perform troubleshooting and error handling and perform operations using modules and tools.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End of MTA Python-->
+
+                    <!-- MTA Javascript-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white p-0"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">Microsoft Technology Associate<br>(Javascript)</h5>
+                            </div>
+                            <div class="card-body project mt-1">
+                                    <div class="col">
+                                        <div data-iframe-width="200" data-iframe-height="240" data-share-badge-id="e5c3aee6-f5d3-45f9-8ce8-7f178f405b55" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                    </div>
+                                    <div class="col">
+                                        <small class="card-text" style="color: lime;">*Click on badge to check achievement</small>
+                                    </div>
+                                <p class="card-text mt-2">This exam was designed to test the skill to program with javaScript operators, methods, and keywords along with variables, data Types, and functions. Implement and Analyze Decisions and Loops, Interact with the Document Object Model, Interact with HTML Forms.  This exam also exposes us to newer javascript libraries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of MTA Javascript-->
+
+                    <!-- National level C quiz-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white p-0"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">National Level C Quiz<br>(BGS Institute of Technology)</h5>
+                            </div>
+                            <div class="card-body project mt-1">
+                                    <div class="col">
+                                        <img  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./assets/images/cquiz.jpg" height="244px"  />
+                                    </div>
+                                    <div class="col mt-1">
+                                        <small class="card-text" style="color: lime;">*Click above to view certificate</small>
+                                    </div>
+                                <p class="card-text mt-2">The quiz was conducted by BGS Institute of Technology across the nation to identify programming skills in C programming language across various topics like datatypes, operators, control statement and error handling. It also tested analytical and logic building skills. I secured 87% and topped my college rankings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of National level C quiz-->
+
+                    <!-- Braintech Championship-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                        <div class="card bg-dark text-white p-0"
+                            style="opacity: 0.9; border-style:solid;border-color: white;">
+                            <div class="card-header " style="border-style:none none solid none;border-color: white;">
+                                <h5 class="card-title" style="color:mintcream;">BrainTech Championship<br>(Zonal Winner Bangalore)</h5>
+                            </div>
+                            <div class="card-body project mt-1">
+                                    <div class="col">
+                                        <img  data-bs-toggle="modal" data-bs-target="#exampleModal1" src="./assets/images/braintech.jpg" height="244px"  />
+                                    </div>
+                                    <div class="col mt-1">
+                                        <small class="card-text" style="color: lime;">*Click above to view certificate</small>
+                                    </div>
+                                <p class="card-text mt-2">I emerged as zonal winner of Bangalore in BrainTech Championship organized by Azure Skynet Solutions Pvt. Ltd. The competition was conducted in the domain of cybersecurity where we had to identify encryption mechanisms used and decrypt the code to get original data without tampering encrypted data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Braintech Championship-->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div id="contact">
+            <div class="container-fluid text-center">
+                <h1 class="section_heading">CONTACT</h1>
+            </div>
+        </div>
+
+        <!--certificate modal national level c quiz-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content bg-dark">
+                <div class="modal-header text-white text-center">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">National Level C Quiz</h1>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img class="img-fluid" src="./assets/images/cquiz.jpg"  />
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!--certificate modal for BrainTech Championship-->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content bg-dark">
+                <div class="modal-header text-white text-center">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">BrainTech Championship</h1>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img class="img-fluid" src="./assets/images/braintech.jpg"  />
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+
+        function sleep(ms) {
+            return new Promise(
+                resolve => setTimeout(resolve, ms)
+            );
+        }
+        async function typingAnimation() {
+            await sleep(1300)
+            const domains = ['Web Applications', 'Mobile Applications', 'Automation systems'];
+            let i = 0;
+            for (let i = 0; i < domains.length; i++) {
+                for (let j = 0; j < domains[i].length; j++) {
+                    document.getElementById('animated_field').innerHTML += domains[i][j];
+                    // console.log(domains[i][j])
+                    await sleep(100);
+                }
+                await sleep(3000)
+                for (let k = domains[i].length - 1; k >= 0; k--) {
+                    document.getElementById('animated_field').innerHTML = domains[i].substring(0, k);
+                    await sleep(100);
+                }
+                await sleep(2000)
+            }
+            setTimeout(typingAnimation, 2000)
+        }
+        typingAnimation()
+
+    </script>
+</body>
+
+</html>
