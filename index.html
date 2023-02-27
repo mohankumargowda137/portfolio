@@ -205,7 +205,7 @@
                         </ol>
                     </div>
                 </div>
-                <a href="./assets/files/Mohan's Resume.pdf" target="_blank" class="btn btn-success mt-4">View Resume <i class="bi bi-arrow-up-right-square-fill"></i></a>
+                <a href="./assets/files/Mohan's Resume.pdf" target="_blank" class="btn btn-md btn-success mt-4">View Resume <i class="bi bi-arrow-up-right-square-fill"></i></a>
             </div>
         </div>
 
@@ -285,7 +285,7 @@
                                             width="130px" />&nbsp;&nbsp;&nbsp;</div>
                                     <div class="col d-block">
                                         <h6 class="card-title mb-0">Anantha Vidyaniketan</h6><small
-                                            class="card-text ">May 2016 - March 2017 (1 year)</small>
+                                            class="card-text ">May 2014 - March 2015 (1 year)</small>
                                         <h5 class="mt-2"><span class="badge text-bg-primary  rounded-pill">Percentage:
                                                 86%</span></h5>
                                     </div>
@@ -355,7 +355,7 @@
                                             style="background-color: white;border-radius: 100%;" />&nbsp;&nbsp;&nbsp;
                                     </div>
                                     <div class="col d-block">
-                                        <h6 class="card-title">IGNITE X LABS</h6><small class="card-text ">Jun 2020
+                                        <h6 class="card-title">IGNITE X LABS</h6><small class="card-text ">Jul 2020
                                             - Sep-2020 (3 months)</small>
                                     </div>
                                 </div>
@@ -956,6 +956,24 @@
             document.getElementById("age").innerHTML="("+age+" years)"
         }
         calculateAge()
+        window.onload=()=>
+        {
+            const xhttp = new XMLHttpRequest();
+
+            // Define a callback function
+            xhttp.onload = function() {
+                const response=JSON.parse(xhttp.responseText)
+                console.log(response)
+                if(response["ok"]==true){
+                    document.getElementById("statusholder").innerHTML='<div class="text-end"><button type="button" class="btn-close btn-close-white text-end p-3" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body text-center"><img class="img-fluid" src="./assets/images/sucess.gif" /> <h6 class="text-white payloadstatus">Message sent successfully</h6></div><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>';
+                    document.getElementById('name').value='';
+                    document.getElementById('email').value='';
+                    document.getElementById('message').value='';
+                    
+                }
+            }
+
+        }
 
     </script>
 </body>
